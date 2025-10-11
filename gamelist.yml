@@ -312,6 +312,18 @@ games:
       - name: A New Beginning
         bggId: 342501
         location: cupboard
+      - name: The Caves
+        bggId: 429959
+      - name: The Flash of Wit
+        bggId: 360831
+      - name: The Hornets
+        bggId: 372024
+      - name: The Initiation Rite
+        bggId: 334338
+      - name: The Terror Birds
+        bggId: 323392
+      - name: The White While
+        bggId: 400739
 
   - name: Patchwork
     bggId: 163412
