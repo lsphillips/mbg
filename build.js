@@ -2,12 +2,6 @@ import {
 	watch
 } from 'node:fs';
 import {
-	cp
-} from 'node:fs/promises';
-import {
-	join
-} from 'node:path';
-import {
 	Worker
 } from 'node:worker_threads';
 import {
