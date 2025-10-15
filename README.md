@@ -1,6 +1,6 @@
 # The Board Game Collection of Luke S. Phillips
 
-[![Main Build](https://github.com/lsphillips/my-board-games/actions/workflows/build-and-deploy.yml/badge.svg?branch=main)](https://github.com/lsphillips/my-board-games/actions)
+[![Main Build](https://github.com/lsphillips/my-board-games/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lsphillips/my-board-games/actions)
 
 The source code for the board game collection web application of Luke S. Phillips.
 
@@ -73,7 +73,3 @@ npm run lint
 ```
 
 Please refer to the [eslint.config.js](eslint.config.js) file to familiar yourself with the rules.
-
-## Deployment
-
-The web application is hosted through GitHub Pages. The deployment is faciliated by the [Build & Deploy](.github/workflows/build-and-deploy.yml) GitHub Action Workflow, where it will perform a build and deploy the resulting artifact to GitHub Pages.
