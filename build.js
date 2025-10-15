@@ -125,7 +125,7 @@ async function renderPages ()
 		});
 	}
 
-	render(true);
+	await render(true);
 
 	if (
 		isDeveloping()
