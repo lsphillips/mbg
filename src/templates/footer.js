@@ -20,9 +20,6 @@ export function renderFooter ({
 } = {})
 {
 	return `<footer class="footer ${className}">
-		<p class="footer__disclaimer">
-			Game information provided by <a href="https://boardgamegeek.com/wiki/page/BGG_XML_API2" target="_blank" class="footer__link">Board Game Geek</a>
-		</p>
 		<p class="footer__last-updated">
 			Last updated at ${ renderLastUpdated(timestamp) }
 		</p>

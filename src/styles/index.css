@@ -35,9 +35,7 @@ img
 
 .app__header
 {
-	position: sticky;
-	top: 0;
-	z-index: 10;
+	/* Here to remind that it exists. */
 }
 
 .app__collection

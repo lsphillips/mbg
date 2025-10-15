@@ -21,11 +21,9 @@ import {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const outdir = 'website', gamelist = 'gamelist.yml', paths = {
-	base     : '/my-board-games',
-	js       : 'scripts',
-	css      : 'styles',
-	favicons : 'favicons',
-	manifest : 'manifest.json'
+	base : '/local/my-board-games',
+	js   : 'scripts',
+	css  : 'styles'
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -142,33 +140,6 @@ async function renderPages ()
 	}
 }
 
-async function copyAssets ()
-{
-	console.log('Copying resources and manifest.');
-
-	async function copy ()
-	{
-		// Copy favicons.
-		await cp('src/resources/favicons', join(outdir, 'favicons'), {
-			recursive : true
-		});
-
-		// Copy manifest.
-		await cp(
-			'src/resources/manifest.json', join(outdir, 'manifest.json')
-		);
-	}
-
-	await copy();
-
-	if (
-		isDeveloping()
-	)
-	{
-		observe(['src/resources'], copy);
-	}
-}
-
 async function buildCssAndJs ()
 {
 	console.log('Building CSS & JS.');
@@ -229,9 +200,6 @@ if (
 
 // Render pages.
 await renderPages();
-
-// Copy assets.
-await copyAssets();
 
 // Build CSS & JS.
 await buildCssAndJs();

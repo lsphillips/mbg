@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: Build
 
 on:
   push:
@@ -39,34 +39,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Package
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: website/
-
-  deploy:
-
-    name: Deploy
-
-    needs:
-      - build
-
-    runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
-
-    if: |
-      github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
