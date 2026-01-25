@@ -694,6 +694,16 @@ games:
     favourite: true
     quick: true
 
+  - name: The Deadlies
+    thumbnail: thumbnails/the-deadlies.png
+    players:
+      min: 3
+      max: 6
+    bggId: 292907
+    location: shelves
+    favourite: true
+    quick: true
+
   - name: The Isle of Cats
     thumbnail: thumbnails/the-isle-of-cats.jpg
     players:
