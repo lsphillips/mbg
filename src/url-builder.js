@@ -23,11 +23,13 @@ function join (base, ...paths)
 export function createUrlBuilder ({
 	base,
 	js,
-	css
+	css,
+	images
 }, hash)
 {
 	return {
-		script     : path => join(base, js, path)  + '?' + hash,
-		stylesheet : path => join(base, css, path) + '?' + hash
+		script     : path => join(base, js, path)     + '?' + hash,
+		stylesheet : path => join(base, css, path)    + '?' + hash,
+		image      : path => join(base, images, path) + '?' + hash
 	};
 }

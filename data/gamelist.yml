@@ -15,6 +15,10 @@ locations:
 games:
 
   - name: 6 nimmt!
+    thumbnail: thumbnails/6-nimmt.jpg
+    players:
+      min: 1
+      max: 10
     bggId: 406321
     bgaId: sechsnimmt
     favourite: true
@@ -22,115 +26,197 @@ games:
     quick: true
 
   - name: Agricola
+    thumbnail: thumbnails/agricola.jpg
+    players:
+      min: 1
+      max: 5
     bggId: 31260
     bgaId: agricola
     location: storage
     expansions:
       - name: Farmers of the Moor
+        thumbnail: thumbnails/farmers-of-the-moor.jpg
         bggId: 43018
         location: storage
 
   - name: "Apothebakery: The Culinary Alchemists"
+    thumbnail: thumbnails/apothebakery-the-culinary-alchemists.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 411202
     location: cupboard
     expansions:
       - name: Arcane Adventures
+        thumbnail: thumbnails/arcane-adventures.png
         bggId: 441755
 
   - name: Argy Bargey
+    thumbnail: thumbnails/argy-bargey.jpg
+    players:
+      min: 2
+      max: 6
     bggId: 352296
     location: storage
 
   - name: Azul
+    thumbnail: thumbnails/azul.png
+    players:
+      min: 2
+      max: 4
     bggId: 230802
     bgaId: azul
     location: storage
     quick: true
 
   - name: "Azul: Summer Pavilion"
+    thumbnail: thumbnails/azul-summer-pavilion.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 287954
     bgaId: azulsummerpavilion
     location: shelves
     quick: true
 
+  - name: Bandida
+    thumbnail: thumbnails/bandida.jpg
+    players:
+      min: 1
+      max: 4
+    bggId: 299571
+    location: shelves
+    quick: true
+
   - name: Bandido
+    thumbnail: thumbnails/bandido.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 191925
     bgaId: bandido
     location: shelves
     quick: true
 
-  - name: Bandida
-    bggId: 299571
-    location: shelves
-    quick: true
-
   - name: Books of Time
+    thumbnail: thumbnails/books-of-time.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 372631
     location: cupboard
 
   - name: Boss Monster
+    thumbnail: thumbnails/boss-monster.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 131835
     location: cupboard
     expansions:
       - name: Tools of Hero-Kind
+        thumbnail: thumbnails/tools-of-hero-kind.jpg
         bggId: 133772
         location: cupboard
       - name: Paper & Pixels
+        thumbnail: thumbnails/paper-and-pixels.jpg
         bggId: 164095
 
   - name: "Boss Monster 2: The Next Level"
+    thumbnail: thumbnails/boss-monster-2-the-next-level.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 174973
     location: cupboard
 
   - name: Calico
+    thumbnail: thumbnails/calico.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 283155
     tabletopiaId: calico
     location: shelves
 
   - name: "Canine Chaos Card Game: Celebrity Edition"
+    thumbnail: thumbnails/canine-chaos-card-game-celebrity-edition.jpg
+    players:
+      min: 2
+      max: 8
     bggId: 283000
     location: storage
 
   - name: Canvas
+    thumbnail: thumbnails/canvas.jpg
+    players:
+      min: 1
+      max: 5
     bggId: 290236
     bgaId: canvas
     location: cupboard
     quick: true
 
   - name: Captain Flip
+    thumbnail: thumbnails/captain-flip.png
+    players:
+      min: 2
+      max: 5
     bggId: 393325
     bgaId: captainflip
     location: shelves
     quick: true
     expansions:
       - name: In the Jaws of the Kraken
+        thumbnail: thumbnails/in-the-jaws-of-the-kraken.jpg
         bggId: 413556
 
   - name: Cascadia
+    thumbnail: thumbnails/cascadia.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 295947
     tabletopiaId: cascadia
     location: shelves
 
   - name: Chocobo's Crystal Hunt
+    thumbnail: thumbnails/chocobos-crystal-hunt.png
+    players:
+      min: 3
+      max: 5
     bggId: 205226
     location: shelves
     quick: true
     expansions:
       - name: Chocobo's Dungeons & Monsters
+        thumbnail: thumbnails/chocobos-dungeons-and-monsters.jpg
         bggId: 223685
 
   - name: Citadels
+    thumbnail: thumbnails/citadels.jpg
+    players:
+      min: 2
+      max: 8
     bggId: 478
     bgaId: citadels
     location: shelves
     quick: true
 
   - name: Codenames
+    thumbnail: thumbnails/codenames.jpg
+    players:
+      min: 2
+      max: 8
     bggId: 178900
     location: shelves
     quick: true
 
   - name: Coup
+    thumbnail: thumbnails/coup.jpg
+    players:
+      min: 2
+      max: 6
     bggId: 131357
     bgaId: coupcitystate
     favourite: true
@@ -138,75 +224,133 @@ games:
     quick: true
 
   - name: Dixit
+    thumbnail: thumbnails/dixit.jpg
+    players:
+      min: 3
+      max: 6
     bggId: 39856
     location: shelves
     quick: true
 
   - name: Dobble
+    thumbnail: thumbnails/dobble.png
+    players:
+      min: 2
+      max: 8
     bggId: 63268
     bgaId: dobble
     location: storage
     quick: true
 
   - name: Everdell
+    thumbnail: thumbnails/everdell.png
+    players:
+      min: 1
+      max: 4
     bggId: 199792
     tabletopiaId: everdell
     location: storage
     favourite: true
     expansions:
       - name: Bellfaire
+        thumbnail: thumbnails/bellfaire.png
+        players:
+          min: 1
+          max: 6
         bggId: 289057
       - name: Mistwood
+        thumbnail: thumbnails/mistwood.png
         bggId: 332397
       - name: Newleaf
+        thumbnail: thumbnails/newleaf.png
         bggId: 332390
       - name: Pearlbrook
+        thumbnail: thumbnails/pearlbrook.jpg
         bggId: 259996
       - name: Spirecrest
+        thumbnail: thumbnails/spirecrest.jpg
         bggId: 289056
 
   - name: Flamecraft
+    thumbnail: thumbnails/flamecraft.jpg
+    players:
+      min: 1
+      max: 5
     bggId: 336986
     location: cupboard
 
   - name: Forbidden Desert
+    thumbnail: thumbnails/forbidden-desert.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 136063
     location: shelves
 
-  - name: Four Gardens
-    bggId: 296043
-    tabletopiaId: four-gardens
-    bgaId: fourgardens
-    location: shelves
-
   - name: Forest Shuffle
+    thumbnail: thumbnails/forest-shuffle.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 391163
     bgaId: forestshuffle
     location: shelves
     expansions:
       - name: Alpine
+        thumbnail: thumbnails/alpine.jpg
         bggId: 412576
       - name: Exploration
+        thumbnail: thumbnails/exploration.jpg
+        players:
+          min: 1
+          max: 5
         bggId: 438231
       - name: Woodland Edge
+        thumbnail: thumbnails/woodland-edge.jpg
         bggId: 424129
 
+  - name: Four Gardens
+    thumbnail: thumbnails/four-gardens.jpg
+    players:
+      min: 2
+      max: 4
+    bggId: 296043
+    tabletopiaId: four-gardens
+    bgaId: fourgardens
+    location: shelves
+
   - name: Friday
+    thumbnail: thumbnails/friday.jpg
+    players:
+      min: 1
+      max: 1
     bggId: 43570
     location: storage
 
   - name: Gizmos
+    thumbnail: thumbnails/gizmos.png
+    players:
+      min: 2
+      max: 4
     bggId: 246192
     bgaId: gizmos
     location: shelves
     favourite: true
 
   - name: Gloom
+    thumbnail: thumbnails/gloom.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 12692
     location: shelves
     quick: true
 
   - name: Go Nuts for Donuts
+    thumbnail: thumbnails/go-nuts-for-donuts.jpg
+    players:
+      min: 2
+      max: 6
     bggId: 184346
     bgaId: gonutsfordonuts
     tabletopiaId: go-nuts-for-donuts
@@ -215,12 +359,20 @@ games:
     quick: true
 
   - name: Gorinto
+    thumbnail: thumbnails/gorinto.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 270293
     tabletopiaId: gorinto
     location: shelves
     quick: true
 
   - name: Hanabi
+    thumbnail: thumbnails/hanabi.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 98778
     bgaId: hanabi
     location: shelves
@@ -228,18 +380,30 @@ games:
     quick: true
 
   - name: "Hanabi Deluxe: What a Show!"
+    thumbnail: thumbnails/hanabi-deluxe-what-a-show.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 290357
     location: cupboard
     favourite: true
     quick: true
 
   - name: Herd Mentality
+    thumbnail: thumbnails/herd-mentality.png
+    players:
+      min: 4
+      max: 20
     bggId: 311322
     tabletopiaId: herd-mentality
     location: storage
     quick: true
 
   - name: Hive Pocket Ultimate
+    thumbnail: thumbnails/hive-pocket-ultimate.png
+    players:
+      min: 2
+      max: 2
     bggId: 427593
     bgaId: hive
     location: shelves
@@ -247,150 +411,282 @@ games:
     quick: true
 
   - name: Insider
+    thumbnail: thumbnails/insider.jpg
+    players:
+      min: 4
+      max: 8
     bggId: 206051
     location: shelves
     quick: true
 
   - name: Keep the Heroes Out!
+    thumbnail: thumbnails/keep-the-heroes-out.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 333255
     tabletopiaId: keep-heroes-out
     location: shelves
     favourite: true
     expansions:
       - name: Guild Master's Revenge Expansion
+        thumbnail: thumbnails/guild-masters-revenge-expansion.jpg
+        players:
+          min: 1
+          max: 5
         bggId: 351550
       - name: The Great Dreamer Expansion
+        thumbnail: thumbnails/the-great-dreamer-expansion.jpg
         bggId: 351549
 
   - name: Little Town
+    thumbnail: thumbnails/little-town.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 241266
     location: cupboard
 
   - name: Mysterium
+    thumbnail: thumbnails/mysterium.jpg
+    players:
+      min: 2
+      max: 7
     bggId: 181304
     location: shelves
     expansions:
       - name: Secrets & Lies
+        thumbnail: thumbnails/secrets-and-lies.png
         bggId: 216465
         location: cupboard
       - name: Hidden Signs
+        thumbnail: thumbnails/hidden-signs.png
         bggId: 192661
         location: cupboard
 
   - name: Mysterium Park
+    thumbnail: thumbnails/mysterium-park.jpg
+    players:
+      min: 2
+      max: 6
     bggId: 301767
     location: shelves
     quick: true
 
   - name: Oh My Goods!
+    thumbnail: thumbnails/oh-my-goods.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 183840
     location: shelves
     expansions:
       - name: Escape to Canyon Brook
+        thumbnail: thumbnails/escape-to-canyon-brook.jpg
+        players:
+          min: 1
+          max: 4
         bggId: 233363
         location: shelves
       - name: Longsdale in Revolt
+        thumbnail: thumbnails/longsdale-in-revolt.jpg
+        players:
+          min: 1
+          max: 4
         bggId: 209323
         location: shelves
 
   - name: Olympus Fluxx
+    thumbnail: thumbnails/olympus-fluxx.png
+    players:
+      min: 2
+      max: 6
     bggId: 356084
     location: shelves
     quick: true
 
   - name: Paku Paku
+    thumbnail: thumbnails/paku-paku.jpg
+    players:
+      min: 2
+      max: 8
     bggId: 214491
     location: shelves
     quick: true
 
   - name: Paleo
+    thumbnail: thumbnails/paleo.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 300531
     tabletopiaId: paleo
     location: cupboard
     favourite: true
     expansions:
       - name: A New Beginning
+        thumbnail: thumbnails/a-new-beginning.jpg
         bggId: 342501
         location: cupboard
       - name: The Caves
+        thumbnail: thumbnails/the-caves.jpg
+        players:
+          min: 1
+          max: 4
         bggId: 429959
       - name: The Flash of Wit
+        thumbnail: thumbnails/the-flash-of-wit.jpg
+        players:
+          min: 1
+          max: 4
         bggId: 360831
       - name: The Hornets
+        thumbnail: thumbnails/the-hornets.png
+        players:
+          min: 1
+          max: 4
         bggId: 372024
       - name: The Initiation Rite
+        thumbnail: thumbnails/the-initiation-rite.png
+        players:
+          min: 1
+          max: 4
         bggId: 334338
       - name: The Terror Birds
+        thumbnail: thumbnails/the-terror-birds.png
+        players:
+          min: 1
+          max: 4
         bggId: 323392
       - name: The White While
+        thumbnail: thumbnails/the-white-while.jpg
+        players:
+          min: 1
+          max: 4
         bggId: 400739
 
   - name: Patchwork
+    thumbnail: thumbnails/patchwork.jpg
+    players:
+      min: 2
+      max: 2
     bggId: 163412
     bgaId: patchwork
     location: shelves
     quick: true
 
   - name: Point Salad
+    thumbnail: thumbnails/point-salad.png
+    players:
+      min: 2
+      max: 6
     bggId: 274960
     tabletopiaId: point-salad
     location: shelves
     quick: true
 
   - name: Rhino Hero
+    thumbnail: thumbnails/rhino-hero.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 91514
     location: cupboard
     quick: true
 
   - name: "Room on the Broom: Memory Card Game"
+    thumbnail: thumbnails/room-on-the-broom-memory-card-game.jpg
+    players:
+      min: 2
+      max: 2
     bggId: 199954
     location: storage
     quick: true
 
   - name: Sakura Arms
+    thumbnail: thumbnails/sakura-arms.jpg
+    players:
+      min: 2
+      max: 2
     bggId: 204493
     tabletopiaId: sakura-arms-lvl99
     location: cupboard
 
   - name: Scythe
+    thumbnail: thumbnails/scythe.jpg
+    players:
+      min: 1
+      max: 5
     bggId: 169786
     bgaId: scythe
     tabletopiaId: scythe
     location: storage
 
   - name: Septima
+    thumbnail: thumbnails/septima.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 360692
     location: cupboard
 
   - name: Smash Up
+    thumbnail: thumbnails/smash-up.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 122522
     location: storage
     expansions:
       - name: Big in Japan
+        thumbnail: thumbnails/big-in-japan.jpg
+        players:
+          min: 2
+          max: 2
         bggId: 216199
 
   - name: Sushi Go!
+    thumbnail: thumbnails/sushi-go.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 133473
     bgaId: sushigo
     location: cupboard
     quick: true
 
   - name: Takenoko
+    thumbnail: thumbnails/takenoko.jpg
+    players:
+      min: 2
+      max: 4
     bggId: 70919
     bgaId: takenoko
     location: cupboard
     favourite: true
     expansions:
       - name: Chibis
+        thumbnail: thumbnails/chibis.jpg
+        players:
+          min: 2
+          max: 4
         bggId: 174095
 
   - name: Tavern Masters
+    thumbnail: thumbnails/tavern-masters.jpg
+    players:
+      min: 1
+      max: 6
     bggId: 210418
     tabletopiaId: tavern-masters
     location: cupboard
     quick: true
 
   - name: "The Crew: Mission Deep Sea"
+    thumbnail: thumbnails/the-crew-mission-deep-sea.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 324856
     bgaId: thecrewdeepsea
     tabletopiaId: mission-deep-sea
@@ -398,14 +694,11 @@ games:
     favourite: true
     quick: true
 
-  - name: Turing Machine
-    bggId: 356123
-    bgaId: turingmachine
-    location: shelves
-    favourite: true
-    quick: true
-
   - name: The Isle of Cats
+    thumbnail: thumbnails/the-isle-of-cats.jpg
+    players:
+      min: 1
+      max: 4
     bggId: 281259
     bgaId: theisleofcats
     tabletopiaId: the-isle-of-cats
@@ -413,44 +706,91 @@ games:
     favourite: true
     expansions:
       - name: Late Arrivals
+        thumbnail: thumbnails/late-arrivals.png
+        players:
+          min: 1
+          max: 6
         bggId: 287361
 
   - name: The One Hundred Torii
+    thumbnail: thumbnails/the-one-hundred-torii.png
+    players:
+      min: 1
+      max: 4
     bggId: 256509
     tabletopiaId: the-one-hundred-torii
     location: shelves
 
   - name: The Quacks of Quedlinburg
+    thumbnail: thumbnails/the-quacks-of-quedlinburg.png
+    players:
+      min: 2
+      max: 4
     bggId: 244521
     tabletopiaId: the-quacks-of-quedlinburg
     location: shelves
 
   - name: The Ravens of Thri Sahashri
+    thumbnail: thumbnails/the-ravens-of-thri-sahashri.jpg
+    players:
+      min: 2
+      max: 2
     bggId: 150293
     location: storage
 
   - name: Throw Throw Avocado
+    thumbnail: thumbnails/throw-throw-avocado.jpg
+    players:
+      min: 2
+      max: 6
     bggId: 340420
     location: cupboard
     quick: true
 
   - name: Tiny Towns
+    thumbnail: thumbnails/tiny-towns.jpg
+    players:
+      min: 1
+      max: 6
     bggId: 265736
     location: cupboard
     quick: true
 
+  - name: Turing Machine
+    thumbnail: thumbnails/turing-machine.png
+    players:
+      min: 1
+      max: 4
+    bggId: 356123
+    bgaId: turingmachine
+    location: shelves
+    favourite: true
+    quick: true
+
   - name: "UNO: Super Mario"
+    thumbnail: thumbnails/uno-super-mario.jpg
+    players:
+      min: 2
+      max: 10
     bggId: 209095
     location: storage
     quick: true
 
   - name: Viticulture Essential Edition
+    thumbnail: thumbnails/viticulture-essential-edition.jpg
+    players:
+      min: 1
+      max: 6
     bggId: 183394
     bgaId: viticulture
     tabletopiaId: viticulture-essential-edition
     location: shelves
 
   - name: Whirling Witchcraft
+    thumbnail: thumbnails/whirling-witchcraft.jpg
+    players:
+      min: 2
+      max: 5
     bggId: 335275
     tabletopiaId: whirling-witchcraft
     location: shelves
@@ -458,24 +798,41 @@ games:
     quick: true
 
   - name: Wingspan
+    thumbnail: thumbnails/wingspan.jpg
+    players:
+      min: 1
+      max: 5
     bggId: 266192
     bgaId: wingspan
     tabletopiaId: wingspan
     location: shelves
     expansions:
       - name: European
+        thumbnail: thumbnails/european.jpg
         bggId: 290448
       - name: Asia
+        thumbnail: thumbnails/asia.jpg
+        players:
+          min: 1
+          max: 2
         bggId: 366161
         location: shelves
 
   - name: Wyrmspan
+    thumbnail: thumbnails/wyrmspan.jpg
+    players:
+      min: 1
+      max: 5
     bggId: 410201
     tabletopiaId: wyrmspan
     location: shelves
     favourite: true
 
   - name: Yes! No! Game
+    thumbnail: thumbnails/yes-no-game.jpg
+    players:
+      min: 2
+      max: 6
     bggId: 13356
     location: storage
     quick: true

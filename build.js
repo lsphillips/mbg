@@ -2,6 +2,12 @@ import {
 	watch
 } from 'node:fs';
 import {
+	cp
+} from 'node:fs/promises';
+import {
+	join
+} from 'node:path';
+import {
 	Worker
 } from 'node:worker_threads';
 import {
@@ -14,10 +20,11 @@ import {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-const outdir = 'website', gamelist = 'gamelist.yml', paths = {
-	base : '/local/my-board-games',
-	js   : 'scripts',
-	css  : 'styles'
+const outdir = 'website', datadir = 'data', paths = {
+	base   : '/local/my-board-games',
+	js     : 'scripts',
+	css    : 'styles',
+	images : 'images'
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -74,14 +81,19 @@ async function renderPages ()
 {
 	console.log('Rendering pages.');
 
-	let data;
+	let list, images;
 
 	async function render (loadGameList)
 	{
 		if (loadGameList)
 		{
-			data = await readGamelist(gamelist);
+			({ list, images } = await readGamelist(datadir));
 		}
+
+		// Copy images.
+		await cp(images, join(outdir, paths.images), {
+			recursive : true
+		});
 
 		// Because we use JS for our "templates" they will
 		// be cached. With no way to purge this cache we
@@ -103,15 +115,15 @@ async function renderPages ()
 
 				const {
 					outdir,
-					data,
+					list,
 					paths
 				} = workerData;
 
-				await renderGamelist(outdir, data, {
+				await renderGamelist(outdir, list, {
 					paths, timestamp : Date.now()
 				});
 			`, {
-				eval : true, workerData : { outdir, data, paths }
+				eval : true, workerData : { outdir, list, paths }
 			});
 
 			worker.on('error', reject);
@@ -125,12 +137,7 @@ async function renderPages ()
 		isDeveloping()
 	)
 	{
-		observe(['src/templates', gamelist], async path =>
-		{
-			await render(
-				path.endsWith(gamelist)
-			);
-		});
+		observe(['src/templates', datadir], render);
 	}
 }
 

@@ -32,17 +32,17 @@ function renderThumbnail (url, className)
 
 function renderExpansion ({
 	name,
-	uri,
+	bggUri,
 	thumbnail,
 	players,
 	location
-})
+}, urls)
 {
 	return `<article class="expansion">
-		${ renderThumbnail(thumbnail, 'expansion__thumbnail') }
+		${ renderThumbnail(urls.image(thumbnail), 'expansion__thumbnail') }
 		<div class="expansion__info">
 			<h2 class="expansion__name">
-				<a href="${uri}" target="_blank" class="expansion__uri">
+				<a href="${bggUri}" target="_blank" class="expansion__uri">
 					${name}
 				</a>
 			</h2>
@@ -64,7 +64,7 @@ function renderExpansion ({
 	</article>`;
 }
 
-function renderExpansions (expansions)
+function renderExpansions (expansions, urls)
 {
 	if (!expansions?.length)
 	{
@@ -77,28 +77,28 @@ function renderExpansions (expansions)
 			data-max-players="${expansion.players.max}"
 			${ expansion.accessible ? 'data-accessible' : '' }
 		>
-			${ renderExpansion(expansion) }
+			${ renderExpansion(expansion, urls) }
 		</li>`, '') }
 	</ul>`;
 }
 
 function renderGame ({
 	name,
-	uri,
 	thumbnail,
 	players,
 	expansions,
 	location,
 	favourite,
+	bggUri,
 	bgaUri,
 	tabletopiaUri
-})
+}, urls)
 {
 	return `<article class="game">
-		${ renderThumbnail(thumbnail, 'game__thumbnail') }
+		${ renderThumbnail(urls.image(thumbnail), 'game__thumbnail') }
 		<div class="game__info">
 			<h2 class="game__name">
-				<a href="${uri}" target="_blank" class="game__uri">
+				<a href="${bggUri}" target="_blank" class="game__uri">
 					${name}
 				</a>
 			</h2>
@@ -135,13 +135,13 @@ function renderGame ({
 				<use href="#favourite" />
 			</svg>` : '' }
 		</div>
-		${ renderExpansions(expansions) }
+		${ renderExpansions(expansions, urls) }
 	</article>`;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export function renderGames (games, stats, {
+export function renderGames (games, stats, urls, {
 	className = ''
 } = {})
 {
@@ -162,7 +162,7 @@ export function renderGames (games, stats, {
 				${ game.bgaUri ? 'data-bga' : '' }
 				${ game.tabletopiaUri ? 'data-tabletopia' : '' }
 			>
-				${ renderGame(game) }
+				${ renderGame(game, urls) }
 			</li>`, '') }
 		</ul>
 		<p class="games__no-matching-games">

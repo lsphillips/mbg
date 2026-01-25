@@ -20,10 +20,7 @@ export function renderIndex ({
 	games,
 	stats,
 	timestamp
-}, {
-	stylesheet,
-	script
-})
+}, urls)
 {
 	return `<!DOCTYPE html>
 
@@ -39,7 +36,7 @@ export function renderIndex ({
 
 			<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-			<link href="${ stylesheet('index.css') }" rel="stylesheet" />
+			<link href="${ urls.stylesheet('index.css') }" rel="stylesheet" />
 
 		</head>
 
@@ -51,7 +48,7 @@ export function renderIndex ({
 				className : 'app__header'
 			}) }
 
-			${ games.length ? renderGames(games, stats, {
+			${ games.length ? renderGames(games, stats, urls, {
 				className : 'app__collection'
 			}) : '<p class="app__empty"> I don\'t seem to have any board games! </p>' }
 
@@ -64,7 +61,7 @@ export function renderIndex ({
 				className : 'app__finder'
 			}) }
 
-			<script type="text/javascript" src="${ script('index.js') }"></script>
+			<script type="text/javascript" src="${ urls.script('index.js') }"></script>
 
 		</body>
 
