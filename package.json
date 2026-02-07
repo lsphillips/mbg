@@ -12,7 +12,7 @@
 	"devDependencies" :
 	{
         "js-yaml" : "4.1.1",
-        "htmlnano" : "3.0.0",
+        "htmlnano" : "3.1.0",
         "esbuild" : "0.27.2",
         "eslint" : "9.39.2",
         "eslint-config-protect-me-from-my-stupidity" : "16.0.0"
