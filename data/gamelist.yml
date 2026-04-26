@@ -171,6 +171,15 @@ games:
         thumbnail: thumbnails/in-the-jaws-of-the-kraken.jpg
         bggId: 413556
 
+  - name: Capybara 'n' Capybara
+    thumbnail: thumbnails/capybara-n-capybara.jpg
+    players:
+      min: 2
+      max: 4
+    bggId: 351515
+    location: shelves
+    quick: true
+
   - name: Cascadia
     thumbnail: thumbnails/cascadia.jpg
     players:
