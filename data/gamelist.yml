@@ -398,6 +398,15 @@ games:
     favourite: true
     quick: true
 
+  - name: Harmonies
+    thumbnail: thumbnails/harmonies.png
+    players:
+      min: 1
+      max: 4
+    bggId: 414317
+    location: shelves
+    quick: true
+
   - name: Herd Mentality
     thumbnail: thumbnails/herd-mentality.png
     players:
@@ -581,7 +590,7 @@ games:
       max: 2
     bggId: 163412
     bgaId: patchwork
-    location: shelves
+    location: cupboard
     quick: true
 
   - name: Point Salad
