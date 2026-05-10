@@ -177,6 +177,7 @@ games:
       min: 2
       max: 4
     bggId: 351515
+    bgaId: capybarancapybara
     location: shelves
     quick: true
 
@@ -404,6 +405,7 @@ games:
       min: 1
       max: 4
     bggId: 414317
+    bgaId: harmonies
     location: shelves
     quick: true
 
