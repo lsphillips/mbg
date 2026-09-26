@@ -1,5 +1,5 @@
 {
-	"name" : "@lsphillips/my-board-games",
+	"name" : "mbg",
 
 	"version" : "1.0.0",
 
@@ -9,20 +9,23 @@
 
 	"author" : "Luke Phillips",
 
+    "packageManager" : "bun@1.4.2",
+
+    "dependencies" :
+    {
+        "htmlnano" : "3.5.1"
+    },
+
 	"devDependencies" :
 	{
-        "js-yaml" : "4.1.1",
-        "htmlnano" : "3.2.1",
-        "esbuild" : "0.28.0",
-        "eslint" : "9.39.4",
-        "eslint-config-protect-me-from-my-stupidity" : "16.0.0"
+        "oxlint" : "1.83.0"
 	},
 
 	"scripts" :
 	{
-        "lint" : "eslint \"**/*.js\"",
-		"build" : "node build.js",
-        "start" : "node build.js develop"
+        "lint" : "oxlint",
+        "lint:fix" : "oxlint --fix",
+		"build" : "bun run build.js"
 	},
 
 	"repository" :

@@ -1,0 +1,45 @@
+locations:
+
+  shelves:
+    name: Shelves
+    accessible: true
+
+  cupboard:
+    name: Cupboard
+    accessible: true
+
+  storage:
+    name: Storage
+    accessible: false
+
+games:
+
+  - id: "406321"
+    name: 6 nimmt!
+    location: shelves
+    favourite: true
+    quick: true
+
+  - id: "31260"
+    name: Agricola
+    location: storage
+    expansions:
+      - id: "43018"
+        name: Farmers of the Moor
+        location: storage
+
+  - id: "411202"
+    name: "Apothebakery: The Culinary Alchemists"
+    location: cupboard
+    expansions:
+      - id: "441755"
+        name: Arcane Adventures
+
+  - id: "352296"
+    name: Argy Bargey
+    location: storage
+
+  - id: "230802"
+    name: Azul
+    location: storage
+    quick: true

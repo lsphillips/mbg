@@ -1,9 +1,22 @@
+.env
+
 # NPM
 # -----------------
 
 /node_modules
 
+# Bun
+# -----------------
+
+.bun-cache
+
+# Assets
+# -----------------
+
+/src/rendering/assets
+
 # Build
 # -----------------
 
+/build
 /website

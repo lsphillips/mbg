@@ -33,11 +33,7 @@ jobs:
           name: build
           path: artifact/
 
-      - name: Zip artifact
-        working-directory: artifact/
-        run: zip -r ../artifact.zip *
-
       - name: Create release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create ${{ github.ref_name }} artifact.zip --title ${{ github.ref_name }} --verify-tag
+        run: gh release create ${{ github.ref_name }} artifact/mbg --title ${{ github.ref_name }} --verify-tag
