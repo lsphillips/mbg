@@ -1,0 +1,31 @@
+NAME
+    mbg - Emissary to manage and render a local board game list.
+
+SYNOPSIS
+    mbg [-h | --help] [-v | --version]
+    mbg render [-h | --help] <gamelist> <output>
+
+DESCRIPTION
+    A CLI application designed to act as an emissary for Home
+    Home Assistant scripts to manage and render a local board
+    game list.
+
+    Integrates with Board Game Geek to embellish the board
+    game list with useful metadata like player count and
+    preview imagery.
+
+COMMANDS
+    render
+        Render a board game collection microsite to be embedded
+        in a Home Assistant dashboard.
+
+OPTIONS
+    -h, --help
+        Display this help manual.
+
+    -v, --version
+        Display the CLI version.
+
+ENVIRONMENT
+    BGG_API_KEY
+        The BoardGameGeek API key.

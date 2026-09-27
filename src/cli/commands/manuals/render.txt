@@ -1,0 +1,25 @@
+NAME
+    mbg render - Render a board game collection microsite to
+    be embedded in a Home Assistant dashboard.
+
+SYNOPSIS
+    mbg render [-h | --help] <gamelist> <output>
+
+DESCRIPTION
+    Reads a YAML game list file and renders a self-contained
+    microsite, in the specified output directory, that is
+    designed to be embedded in a Home Assistant dashboard.
+
+    The output directory is created if it does not exist. All
+    paths are resolved relative to the current working directory.
+
+ARGUMENTS
+    <gamelist>
+        Path to a YAML game list.
+
+    <output>
+        Directory in which to write the microsite files into.
+
+OPTIONS
+    -h, --help
+        Display this help manual.

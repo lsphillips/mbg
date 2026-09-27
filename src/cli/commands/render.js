@@ -7,7 +7,7 @@ import {
 import {
 	parseArgs
 } from 'node:util';
-import manual from './manuals/build.txt' with { type: 'text' };
+import manual from './manuals/render.txt' with { type: 'text' };
 import BggClient from '../../gamelist/bgg-client.js';
 import GamelistReader from '../../gamelist/gamelist-reader.js';
 import {
@@ -57,7 +57,7 @@ async function getOutput (value)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export default async function build (args, { bggApiKey, cacheDir }, terminal)
+export default async function render (args, { bggApiKey, cacheDir }, terminal)
 {
 	const {
 		values,
@@ -126,7 +126,7 @@ export default async function build (args, { bggApiKey, cacheDir }, terminal)
 			timestamp : new Date()
 		});
 
-	terminal.log('Build completed successfully!');
+	terminal.log('Render completed successfully!');
 
 	return 0;
 }
