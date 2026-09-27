@@ -35,10 +35,6 @@ games:
       - id: "441755"
         name: Arcane Adventures
 
-  - id: "352296"
-    name: Argy Bargey
-    location: storage
-
   - id: "230802"
     name: Azul
     location: storage

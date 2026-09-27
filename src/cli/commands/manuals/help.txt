@@ -7,8 +7,8 @@ SYNOPSIS
 
 DESCRIPTION
     A CLI application designed to act as an emissary for Home
-    Home Assistant scripts to manage and render a local board
-    game list.
+    Assistant scripts to manage and render a local board game
+    list.
 
     Integrates with Board Game Geek to embellish the board
     game list with useful metadata like player count and

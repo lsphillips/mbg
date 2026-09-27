@@ -2,38 +2,52 @@
 
 [![Main Build](https://github.com/lsphillips/my-board-games/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lsphillips/my-board-games/actions)
 
-The source code for the board game collection web application that is designed to be embedded as a Home Assistant dashboard.
+A CLI application designed to act as an emissary for Home Assistant scripts to manage and render a local board game list.
+
+## Installation
+
+On Linux, the typical OS for running Home Assistant, you can install by running the following commands (replacing `{platform}` with `arm64` or `x64` depending on your host platform):
+
+``` bash
+# Download.
+curl -fL https://github.com/lsphillips/my-board-games/releases/latest/download/mbg-linux-{platform} -o "$HOME/.local/bin/mbg"
+
+# Make Executable.
+chmod +x "$HOME/.local/bin/mbg"
+
+# Test.
+mbg --help
+```
+
+> [!IMPORTANT]
+> Make sure that the `$HOME/.local/bin` directory exists and that it's added to your `PATH`.
 
 ## The Game List
 
-The web application is generated from a [game list file](data/gamelist.yml), this file has two top level properties: [games](#games) and [locations](#locations).
+A game list is a YAML file that has two top level properties: [games](#games) and [locations](#locations); You can view the [gamelist.example.yml](./gamelist.example.yml) file for an example.
 
 ### Games
 
 The games property is a required array that defines the games collection. Each item in an array is an object that represents a single board game that has the following properties:
 
-| Property       | Required | Type      | Default | Description                                                                                                                                          |
-| -------------- | :------: | :-------: | :-----: | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`         | Yes      | `string`  |         | The name of the board game.                                                                                                                          |
-| `thumbnail`    | Yes      | `string`  |         | The path to a thumbnail image for the board game that is in the `data/images` directory. The path should be relative to the `data/images` directory. |
-| `players`      | Yes      | `object`  |         | An object with a `min` and `max` property describing the minimum and maximum number of players, respectively, that the baord game supports.          |                                                                                                                                              |
-| `bggId`        | Yes      | `number`  |         | The Board Game Geek ID for the board game.                                                                                                           |
-| `bgaId`        | No       | `string`  |         | The Board Game Arena ID for the board game.                                                                                                          |
-| `tabletopiaId` | No       | `string`  |         | The Tabletopia ID for the board game.                                                                                                                |
-| `favourite`    | No       | `boolean` | `false` | Indicates whether the board game is a favourite or not.                                                                                              |
-| `location`     | Yes      | `string`  |         | The key corresponding to a location, defined [here](#locations), that the board game is stored.                                                      |
-| `expansions`   | No       | `array`   |         | The expansions owned for the board game. This is an array of [expansion objects](#expansions).                                                       |
-| `quick`        | No       | `boolean` | `false` | Indicates if the board game is quick to play.                                                                                                        |
+| Property        | Required | Type      | Default | Description                                                                                     |
+| --------------- | :------: | :-------: | :-----: | ----------------------------------------------------------------------------------------------- |
+| `id`            | Yes      | `string`  |         | The Board Game Geek ID for the board game.                                                      |
+| `name`          | Yes      | `string`  |         | The name of the board game.                                                                     |
+| `bgaUri`        | No       | `string`  |         | The Board Game Arena URI for the board game.                                                    |
+| `tabletopiaUri` | No       | `string`  |         | The Tabletopia URI for the board game.                                                          |
+| `favourite`     | No       | `boolean` | `false` | Indicates whether the board game is a favourite or not.                                         |
+| `location`      | Yes      | `string`  |         | The key corresponding to a location, defined [here](#locations), that the board game is stored. |
+| `expansions`    | No       | `array`   |         | The expansions owned for the board game. This is an array of [expansion objects](#expansions).  |
+| `quick`         | No       | `boolean` | `false` | Indicates if the board game is quick to play or not.                                            |
 
 ### Expansions
 
-| Property       | Required | Type      | Default | Description                                                                                                                                                                                                                                             |
-| -------------- | :------: | :-------: | :-----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`         | Yes      | `string`  |         | The name of the board game expansion.                                                                                                                                                                                                                   |
-| `thumbnail`    | Yes      | `string`  |         | The path to a thumbnail image for the board game expansion that is in the `data/images` directory. The path should be relative to the `data/images` directory.                                                                                          |
-| `players`      | No       | `object`  |         | An object with a `min` and `max` property describing the minimum and maximum number of players, respectively, that the baord game expansion supports. If the expansion doesn't change the number of players supported it doesn't need to be configured. |
-| `bggId`        | Yes      | `number`  |         | The Board Game Geek ID for the board game expansion.                                                                                                                                                                                                    |
-| `location`     | No       | `string`  |         | The key corresponding to a location, defined [here](#locations), that the board game expansion is stored. If this is omitted then it's assumed that it is located in the base game box.                                                                 |
+| Property   | Required | Type      | Default | Description                                                                                                                                                                             |
+| ---------- | :------: | :-------: | :-----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`       | Yes      | `string`  |         | The Board Game Geek ID for the board game expansion.                                                                                                                                    |
+| `name`     | Yes      | `string`  |         | The name of the board game expansion.                                                                                                                                                   |
+| `location` | No       | `string`  |         | The key corresponding to a location, defined [here](#locations), that the board game expansion is stored. If this is omitted then it's assumed that it is located in the base game box. |
 
 ### Locations
 
@@ -47,33 +61,40 @@ The locations property is a required key-value map defining the locations where 
 ## Development
 
 > [!NOTE]
-> You will need [Node.js](https://nodejs.org/) v24 (or higher) installed.
+> You will need [Bun](https://bun.com/) v1.4.2 (or higher) installed.
 
 ### Building
 
-To build a deployable bundle in the `website` directory, run this command:
+To compile the application for Mac (Apple Silicon), Linux (ARM & x64) and Windows (x64) in the `build` directory, run this command:
 
 ``` bash
-npm run build
+bun run build
 ```
-
-### Running locally
-
-To run the website on a local development server running on port `1992`, run this command:
-
-``` bash
-npm run start
-```
-
-> [!TIP]
-> Changes in [client JavaScript](src/scripts), [stylesheets](src/styles), [templates](src/templates) and the [game list data](data) will trigger the website to be rebuilt automatically.
 
 ### Code Quality
 
-To perform code quality checks, powered by ESLint, run this command:
+To perform code quality checks, powered by [Oxlint](https://oxc.rs/docs/guide/usage/linter), run this command:
 
 ``` bash
-npm run lint
+bun run lint
 ```
 
-Please refer to the [eslint.config.js](eslint.config.js) file to familiar yourself with the rules.
+To fix code quality quality issues, run this command:
+
+``` bash
+bun run lint:fix
+```
+
+### Running Locally
+
+You can run locally by running the entrypoint, for example:
+
+``` bash
+bun ./bin/mbg.js --version
+```
+
+To perform a local render, you can run the application with this input:
+
+``` bash
+bun ./bin/mbg.js render ./gamelist.example.yml ./website
+```
