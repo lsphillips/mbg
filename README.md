@@ -65,7 +65,7 @@ The locations property is a required key-value map defining the locations where 
 
 ### Building
 
-To compile the application for Mac (Apple Silicon), Linux (ARM & x64) and Windows (x64) in the `build` directory, run this command:
+To compile the application for Linux (ARM & x64) in the `build` directory, run this command:
 
 ``` bash
 bun run build
@@ -98,3 +98,6 @@ To perform a local render, you can run the application with this input:
 ``` bash
 bun ./bin/mbg.js render ./gamelist.example.yml ./website
 ```
+
+> [!IMPORTANT]
+> The application requires a BoardGameGeek API key stored in the `BGG_API_KEY` environment variable. Read more [here](https://boardgamegeek.com/using_the_xml_api) about retrieving an API key of your own.
