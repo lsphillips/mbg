@@ -57,7 +57,7 @@ function renderExpansion ({
 					<svg xmlns="http://www.w3.org/2000/svg" class="expansion__location-icon">
 						<use href="#location" />
 					</svg>
-					${location}
+					${location.name}
 				</span>
 			</small>
 		</div>
@@ -75,7 +75,7 @@ function renderExpansions (expansions, urls)
 		${ expansions.reduce((acc, expansion) => acc + `<li class="game__expansion"
 			data-min-players="${expansion.players.min}"
 			data-max-players="${expansion.players.max}"
-			${ expansion.accessible ? 'data-accessible' : '' }
+			${ expansion.location.accessible ? 'data-accessible' : '' }
 		>
 			${ renderExpansion(expansion, urls) }
 		</li>`, '') }
@@ -113,7 +113,7 @@ function renderGame ({
 					<svg xmlns="http://www.w3.org/2000/svg" class="game__location-icon">
 						<use href="#location" />
 					</svg>
-					${location}
+					${location.name}
 				</span>
 				${ tabletopiaUri ? `<a href="${tabletopiaUri}" target="_blank" title="Available to play on Tabletopia" class="game__tabletopia">
 					<svg xmlns="http://www.w3.org/2000/svg" class="game__tabletopia-icon">
@@ -157,7 +157,7 @@ export function renderGames (games, stats, urls, {
 			${ games.reduce((acc, game) => acc + `<li class="games__item"
 				data-min-players="${game.players.min}"
 				data-max-players="${game.players.max}"
-				${ game.accessible ? 'data-accessible' : '' }
+				${ game.location.accessible ? 'data-accessible' : '' }
 				${ game.quick ? 'data-quick' : '' }
 				${ game.bgaUri ? 'data-bga' : '' }
 				${ game.tabletopiaUri ? 'data-tabletopia' : '' }

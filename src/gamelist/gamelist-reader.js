@@ -7,7 +7,7 @@ function toExpansionModel ({
 	id,
 	name,
 	location
-}, locations, metadata)
+}, game, locations, metadata)
 {
 	if (
 		location && !locations[location]
@@ -35,7 +35,7 @@ function toExpansionModel ({
 		players,
 		thumbnail,
 		url,
-		location : locations[location]
+		location : locations[location] ?? { ...game.location, name : 'In Game Box' }
 	};
 
 	return expansion;
@@ -87,7 +87,7 @@ function toGameModel ({
 	};
 
 	// Expansions.
-	game.expansions = expansions.map(expansion => toExpansionModel(expansion, locations, metadata));
+	game.expansions = expansions.map(expansion => toExpansionModel(expansion, game, locations, metadata));
 
 	return game;
 }
