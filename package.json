@@ -5,7 +5,7 @@
 
 	"type" : "module",
 
-	"description" : "The source code for the board game collection web application of Luke S. Phillips.",
+	"description" : "A CLI application designed to act as an emissary for Home Assistant scripts to manage and render a local board game list.",
 
 	"author" : "Luke Phillips",
 

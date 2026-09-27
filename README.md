@@ -1,4 +1,4 @@
-# The Board Game Collection of Luke S. Phillips
+# `mbg`
 
 [![Main Build](https://github.com/lsphillips/my-board-games/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lsphillips/my-board-games/actions)
 
