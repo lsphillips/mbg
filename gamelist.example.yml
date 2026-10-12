@@ -1,7 +1,7 @@
 locations:
 
   - id: shelves
-    name: ""
+    name: Shelves
     accessible: true
 
   - id: cupboard

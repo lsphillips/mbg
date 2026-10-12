@@ -13,12 +13,12 @@
 
     "dependencies" :
     {
-        "htmlnano" : "3.5.1"
+        "htmlnano" : "3.6.1"
     },
 
 	"devDependencies" :
 	{
-        "oxlint" : "1.83.0"
+        "oxlint" : "1.87.0"
 	},
 
 	"scripts" :
