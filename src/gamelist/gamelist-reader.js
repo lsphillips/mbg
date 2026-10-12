@@ -1,6 +1,19 @@
-function toBggIds (games)
+import {
+	isValidGamelist
+} from './gamelist-validator.js';
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function getBggIds (gamelist)
 {
-	return games.reduce((ids, { id, expansions = [] }) => [...ids, id, ...expansions.map(e => e.id)], []);
+	return gamelist.games.reduce((ids, { id, expansions = [] }) => [...ids, id, ...expansions.map(e => e.id)], []);
+}
+
+function toGameBoxLocation ({
+	accessible
+})
+{
+	return { accessible, id : 'gamebox', name : 'In Game Box' };
 }
 
 function toExpansionModel ({
@@ -9,18 +22,11 @@ function toExpansionModel ({
 	location
 }, game, locations, metadata)
 {
-	if (
-		location && !locations[location]
-	)
-	{
-		throw new Error(`Game expansion "${name}" is in an unrecognized location.`);
-	}
-
 	const data = metadata.find(m => m.id === id);
 
 	if (!data)
 	{
-		throw new Error(`Game expansion \`${name}\` (with ID ${id}) could not be found on BGG.`);
+		throw new Error(`Expansion with ${id} could not be found on BGG.`);
 	}
 
 	const {
@@ -35,7 +41,7 @@ function toExpansionModel ({
 		players,
 		thumbnail,
 		url,
-		location : locations[location] ?? { ...game.location, name : 'In Game Box' }
+		location : locations.find(l => l.id === location) ?? toGameBoxLocation(game.location)
 	};
 
 	return expansion;
@@ -52,18 +58,11 @@ function toGameModel ({
 	expansions = []
 }, locations, metadata)
 {
-	if (
-		!locations[location]
-	)
-	{
-		throw new Error(`Game \`${name}\` is in an unrecognized location.`);
-	}
-
 	const data = metadata.find(m => m.id === id);
 
 	if (!data)
 	{
-		throw new Error(`Game \`${name}\` (with ID ${id}) could not be found on BGG.`);
+		throw new Error(`Game with ID ${id} could not be found on BGG.`);
 	}
 
 	const {
@@ -77,7 +76,7 @@ function toGameModel ({
 		bgaUri,
 		tabletopiaUri,
 		name,
-		location : locations[location],
+		location : locations.find(l => l.id === location),
 		thumbnail,
 		players,
 		url,
@@ -115,9 +114,16 @@ export default class GamelistReader
 		}
 		catch (cause)
 		{
-			throw new Error(`Could not read file \`${file}\` as a valid YAML file.`, {
+			throw new Error(`Could not read game list ${file} as a valid YAML file.`, {
 				cause
 			});
+		}
+
+		const [valid, error] = await isValidGamelist(gamelist);
+
+		if (!valid)
+		{
+			throw new Error(`Gamelist is invalid: ${error}`);
 		}
 
 		let metadata;
@@ -125,12 +131,12 @@ export default class GamelistReader
 		try
 		{
 			metadata = await this.#bggClient.getGamesAndExpansions(
-				toBggIds(gamelist.games)
+				getBggIds(gamelist)
 			);
 		}
 		catch (cause)
 		{
-			throw new Error('Could not fetch supporting metadata for games and expansions.', {
+			throw new Error('Could not fetch supporting metadata for games and expansions from BGG.', {
 				cause
 			});
 		}

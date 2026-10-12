@@ -28,7 +28,7 @@ A game list is a YAML file that has two top level properties: [games](#games) an
 
 ### Games
 
-The games property is a required array that defines the games collection. Each item in an array is an object that represents a single board game that has the following properties:
+The `games` property is a required array that defines the games collection. Each item in an array is an object that represents a single board game that has the following properties:
 
 | Property        | Required | Type      | Default | Description                                                                                     |
 | --------------- | :------: | :-------: | :-----: | ----------------------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ The games property is a required array that defines the games collection. Each i
 | `bgaUri`        | No       | `string`  |         | The Board Game Arena URI for the board game.                                                    |
 | `tabletopiaUri` | No       | `string`  |         | The Tabletopia URI for the board game.                                                          |
 | `favourite`     | No       | `boolean` | `false` | Indicates whether the board game is a favourite or not.                                         |
-| `location`      | Yes      | `string`  |         | The key corresponding to a location, defined [here](#locations), that the board game is stored. |
+| `location`      | Yes      | `string`  |         | The ID corresponding to a location, defined [here](#locations), where the board game is stored. |
 | `expansions`    | No       | `array`   |         | The expansions owned for the board game. This is an array of [expansion objects](#expansions).  |
 | `quick`         | No       | `boolean` | `false` | Indicates if the board game is quick to play or not.                                            |
 
@@ -51,10 +51,11 @@ The games property is a required array that defines the games collection. Each i
 
 ### Locations
 
-The locations property is a required key-value map defining the locations where board games are stored. Each location object has the following properties:
+The `locations` property is a required array that defines the locations where board games are stored. A single location has the following properties:
 
 | Property     | Required | Type      | Default | Description                                              |
 | ------------ | :------: | :-------: | :-----: | -------------------------------------------------------- |
+| `id`         | Yes      | `string`  |         | The ID of the location.                                  |
 | `name`       | Yes      | `string`  |         | The name of the location.                                |
 | `accessible` | Yes      | `boolean` |         | Indicates whether the location is easy to access or not. |
 

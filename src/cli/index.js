@@ -59,7 +59,7 @@ export async function run (args, env, stdout, stderr, {
 		{
 			if (command === 'render')
 			{
-				return render(argv, config, terminal);
+				return await render(argv, config, terminal);
 			}
 		}
 		catch (error)
@@ -83,6 +83,6 @@ export async function run (args, env, stdout, stderr, {
 
 	if (values.help)
 	{
-		return help(terminal);
+		return await help(terminal);
 	}
 }

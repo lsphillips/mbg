@@ -103,7 +103,7 @@ export default async function render (args, { bggApiKey, cacheDir }, terminal)
 		bggApiUri : 'https://boardgamegeek.com/xmlapi2'
 	});
 
-	terminal.log(`Reading the gamelist at \`${gamelist}\`...`);
+	terminal.log(`Reading the gamelist at ${gamelist}...`);
 
 	const games = await new GamelistReader(client)
 		.read(gamelist);
@@ -117,7 +117,7 @@ export default async function render (args, { bggApiKey, cacheDir }, terminal)
 		maximumPlayers : getMaximumPlayers(games)
 	};
 
-	terminal.log(`Rendering gamelist in directory \`${output}\`...`);
+	terminal.log(`Rendering gamelist in directory ${output}...`);
 
 	await new GamelistRenderer()
 		.render(output, {

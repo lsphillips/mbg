@@ -1,14 +1,14 @@
 locations:
 
-  shelves:
-    name: Shelves
+  - id: shelves
+    name: ""
     accessible: true
 
-  cupboard:
+  - id: cupboard
     name: Cupboard
     accessible: true
 
-  storage:
+  - id: storage
     name: Storage
     accessible: false
 
