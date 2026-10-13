@@ -9,6 +9,48 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+:root
+{
+	color-scheme: light;
+	--mbg-page-background-color: #fafafa;
+	--mbg-surface-background-color: #ffffff;
+	--mbg-control-background-color: #f3f3f3;
+	--mbg-text-color: #141414;
+	--mbg-secondary-text-color: #5e5e5e;
+	--mbg-action-text-color: #ffffff;
+	--mbg-card-border-color: rgba(0, 0, 0, 0.12);
+	--mbg-control-border-color: rgba(0, 0, 0, 0.38);
+	--mbg-dialog-shadow-color: rgba(0, 0, 0, 0.16);
+	--mbg-favourite-color: #ff9800;
+	--mbg-action-background-color: #006787;
+	--mbg-action-hover-background-color: #004156;
+	--mbg-backdrop-background-color: #000000;
+	--mbg-bga-color: #82519c;
+	--mbg-tabletopia-color: #47a1d2;
+}
+
+@media (prefers-color-scheme: dark)
+{
+	:root
+	{
+		color-scheme: dark;
+		--mbg-page-background-color: #111111;
+		--mbg-surface-background-color: #1c1c1c;
+		--mbg-control-background-color: rgba(255, 255, 255, 0.05);
+		--mbg-text-color: #e1e1e1;
+		--mbg-secondary-text-color: #9b9b9b;
+		--mbg-action-text-color: #001721;
+		--mbg-card-border-color: rgba(225, 225, 225, 0.12);
+		--mbg-control-border-color: rgba(255, 255, 255, 0.38);
+		--mbg-dialog-shadow-color: rgba(0, 0, 0, 0.48);
+		--mbg-action-background-color: #009ac7;
+		--mbg-action-hover-background-color: #18bcf2;
+		--mbg-bga-color: #c3a1d4;
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 html { height: 100% }
 
 img
@@ -30,7 +72,8 @@ img
 	padding: 0;
 	margin: 0;
 	font: 14px Open Sans, sans-serif;
-	background: #eeeef1;
+	color: var(--mbg-text-color);
+	background: var(--mbg-page-background-color);
 }
 
 .app__header
@@ -47,7 +90,7 @@ img
 {
 	padding: 10px;
 	text-align: center;
-	color: #777;
+	color: var(--mbg-secondary-text-color);
 	font-size: 15px;
 }
 

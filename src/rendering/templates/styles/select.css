@@ -12,7 +12,7 @@
 		width: 8px;
 		height: 8px;
 		transform: rotate(135deg);
-		border: solid #333;
+		border: solid var(--mbg-secondary-text-color);
 		border-width: 2px 2px 0 0;
 		content: '';
 	}
@@ -35,9 +35,9 @@
 	padding: 0 36px 0 10px;
 	margin: 0;
 	font-size: 15px;
-	color: #171a1d;
-	background: #f8f8f8;
-	border: 1px solid #ccc;
+	color: var(--mbg-text-color);
+	background: var(--mbg-control-background-color);
+	border: 1px solid var(--mbg-control-border-color);
 	border-radius: 3px;
 	cursor: pointer;
 
@@ -47,5 +47,5 @@
 		outline: 0;
 	}
 
-	&:focus { border-color: #777 }
+	&:focus { border-color: var(--mbg-action-background-color) }
 }

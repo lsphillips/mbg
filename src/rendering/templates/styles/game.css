@@ -4,7 +4,8 @@
 	position: relative;
 	margin: 0;
 	max-width: none;
-	background: #f8f8f8;
+	background: var(--mbg-control-background-color);
+	border-radius: 3px;
 
 	&::before
 	{
@@ -35,9 +36,10 @@
 	flex-flow: row wrap;
 	align-items: center;
 	padding: 10px;
-	background: #fff;
+	background: var(--mbg-surface-background-color);
+	border: 1px solid var(--mbg-card-border-color);
 	border-radius: 3px;
-	border-bottom: 1px solid #ccc;
+	box-shadow: none;
 }
 
 .game__thumbnail
@@ -57,18 +59,19 @@
 	padding: 0;
 	margin: 0;
 	font-size: 15px;
-	color: #171a1d;
+	color: var(--mbg-text-color);
 }
 
 .game__uri
 {
 	text-decoration: none;
-	color: #171a1d;
+	color: var(--mbg-text-color);
 
 	&:hover,
 	&:focus
 	{
 		text-decoration: underline;
+		outline: 0;
 	}
 }
 
@@ -78,7 +81,7 @@
 	align-items: center;
 	column-gap: 10px;
 	margin: 5px 0 0;
-	color: #666;
+	color: var(--mbg-secondary-text-color);
 	font-size: 12px;
 }
 
@@ -93,7 +96,7 @@
 
 .game__bga
 {
-	color: #82519c;
+	color: var(--mbg-bga-color);
 	text-decoration: none;
 
 	&:hover,
@@ -105,7 +108,7 @@
 
 .game__tabletopia
 {
-	color: #47a1d2;
+	color: var(--mbg-tabletopia-color);
 	text-decoration: none;
 
 	&:hover,
@@ -139,7 +142,7 @@
 	right: 5px;
 	width: 18px;
 	height: 18px;
-	fill: gold;
+	fill: var(--mbg-favourite-color);
 }
 
 .game__expansions
@@ -185,18 +188,19 @@
 	padding: 0;
 	margin: 0;
 	font-size: 14px;
-	color: #171a1d;
+	color: var(--mbg-text-color);
 }
 
 .expansion__uri
 {
 	text-decoration: none;
-	color: #171a1d;
+	color: var(--mbg-text-color);
 
 	&:hover,
 	&:focus
 	{
 		text-decoration: underline;
+		outline: 0;
 	}
 }
 
@@ -206,7 +210,7 @@
 	align-items: center;
 	column-gap: 10px;
 	margin: 5px 0 0;
-	color: #666;
+	color: var(--mbg-secondary-text-color);
 	font-size: 12px;
 }
 

@@ -15,8 +15,8 @@
 	height: 30px;
 	padding: 2px;
 	margin: 0 0 0 10px;
-	background: #f8f8f8;
-	border: 1px solid #ccc;
+	background: var(--mbg-control-background-color);
+	border: 1px solid var(--mbg-control-border-color);
 	border-radius: 3px;
 	transition: background-color 0.2s;
 
@@ -25,8 +25,8 @@
 		display: block;
 		width: 22px;
 		height: 22px;
-		background: #fff;
-		border: 1px solid #ccc;
+		background: var(--mbg-surface-background-color);
+		border: 1px solid var(--mbg-control-border-color);
 		border-radius: 3px;
 		content: '';
 		transition: margin 0.2s;
@@ -34,21 +34,27 @@
 
 	&:checked
 	{
-		background: #171a1d;
-		border-color: #171a1d !important;
+		background: var(--mbg-action-background-color);
+		border-color: var(--mbg-action-background-color);
 		content: '';
 
 		&::before
 		{
 			margin: 0 0 0 30px;
-			border-color: #171a1d;
+			border-color: var(--mbg-action-background-color);
 		}
 	}
 
 	&:focus
 	{
 		outline: 0;
-		border-color: #777;
+		border-color: var(--mbg-action-background-color);
+	}
+
+	&:focus-visible
+	{
+		outline: 2px solid var(--mbg-action-background-color);
+		outline-offset: 2px;
 	}
 }
 
