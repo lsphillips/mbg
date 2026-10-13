@@ -23,6 +23,7 @@ games:
   - id: "31260"
     name: Agricola
     location: storage
+    bgaUri: "https://en.boardgamearena.com/gamepanel?game=agricola"
     expansions:
       - id: "43018"
         name: Farmers of the Moor
@@ -39,3 +40,8 @@ games:
     name: Azul
     location: storage
     quick: true
+
+  - id: "283155"
+    name: "Calico"
+    location: shelves
+    tabletopiaUri: "https://tabletopia.com/games/calico"
