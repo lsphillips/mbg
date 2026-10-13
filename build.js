@@ -7,7 +7,12 @@ import {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-const targets = ['bun-linux-arm64', 'bun-linux-x64'];
+const targets = [
+	'bun-linux-arm64',
+	'bun-linux-x64',
+	'bun-linux-arm64-musl',
+	'bun-linux-x64-musl'
+];
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
