@@ -41,7 +41,7 @@ function getCollection (element, item)
 
 async function downloadImage (url, path)
 {
-	const file = `${path}.${ extname(new URL(url).pathname) }`;
+	const file = `${path}${ extname(new URL(url).pathname) }`;
 
 	if (
 		await Bun.file(file).exists()
