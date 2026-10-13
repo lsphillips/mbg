@@ -23,7 +23,7 @@ games:
   - id: "31260"
     name: Agricola
     location: storage
-    bgaUri: "https://en.boardgamearena.com/gamepanel?game=agricola"
+    bgaUri: "https://boardgamearena.com/gamepanel?game=agricola"
     expansions:
       - id: "43018"
         name: Farmers of the Moor

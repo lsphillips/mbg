@@ -8,20 +8,6 @@ function isBoolean (value)
 	return value === undefined || typeof value === 'boolean';
 }
 
-function isUri (uri)
-{
-	try
-	{
-		new URL(uri);
-	}
-	catch
-	{
-		return false;
-	}
-
-	return true;
-}
-
 function isValidLocation ({
 	id,
 	name,
@@ -78,14 +64,14 @@ function isValidGame ({
 	}
 
 	if (
-		bgaUri && !isUri(bgaUri)
+		bgaUri && !URL.canParse(bgaUri)
 	)
 	{
 		return [false, `Game with ID ${id} has an invalid BGA URI`];
 	}
 
 	if (
-		tabletopiaUri && !isUri(tabletopiaUri)
+		tabletopiaUri && !URL.canParse(tabletopiaUri)
 	)
 	{
 		return [false, `Game with ID ${id} has an invalid Tabletopia URI`];
