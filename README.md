@@ -6,21 +6,11 @@ A CLI application designed to act as an emissary for Home Assistant scripts to m
 
 ## Installation
 
-On Linux, the typical OS for running Home Assistant, you can install by running the following commands (replacing `{platform}` with `arm64`, `arm64-musl`, `x64` or `x64-musl` depending on your host platform):
+On Linux, the typical OS for running Home Assistant, you can install by downloading and running the installer (replacing `{platform}` with `arm64`, `arm64-musl`, `x64` or `x64-musl` depending on your host platform):
 
 ``` bash
-# Download.
-curl -fL https://github.com/lsphillips/my-board-games/releases/latest/download/mbg-linux-{platform} -o "/config/bin/mbg"
-
-# Make Executable.
-chmod +x "/config/bin/mbg"
-
-# Test.
-/config/bin/mbg --help
+curl -fsSL "https://github.com/lsphillips/mbg/releases/latest/download/install.sh" | bash -s -- --platform {platform}
 ```
-
-> [!IMPORTANT]
-> Make sure that the `/config/bin` directory exists.
 
 ## The Game List
 

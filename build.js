@@ -16,6 +16,7 @@ const targets = [
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// Compile.
 for (const target of targets)
 {
 	const filename = target.replace('bun-', `${name}-`);
@@ -31,3 +32,8 @@ for (const target of targets)
 		bytecode : true
 	});
 }
+
+// Copy installer.
+await Bun.write(
+	'./build/install.sh', Bun.file('./install.sh')
+);
