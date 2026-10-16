@@ -92,6 +92,8 @@ export default class GamelistRenderer
 		timestamp,
 	})
 	{
+		const version = timestamp.getTime();
+
 		// Copy styles.
 		const styles = await copyStyles(outdir);
 
@@ -101,7 +103,8 @@ export default class GamelistRenderer
 		// Create URI builder.
 		const urls = new UrlBuilder('', {
 			styles,
-			scripts
+			scripts,
+			version
 		});
 
 		// Render HTML.
