@@ -92,7 +92,7 @@ export default async function render (args, { bggApiKey, cacheDir }, terminal)
 	}
 	catch (error)
 	{
-		terminal.error(error);
+		terminal.err(error);
 
 		return 2;
 	}
