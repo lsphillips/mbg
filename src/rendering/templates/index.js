@@ -30,7 +30,7 @@ export function renderIndex ({
 		<head>
 
 			<title>
-				Luke S. Phillips - My Board Games
+				Board Games
 			</title>
 
 			<meta charset="utf-8" />

@@ -1,14 +1,15 @@
 .header
 {
-	position: fixed;
-	top: -9999px;
-	left: -9999px;
-	z-index: 10;
+	padding: 24px 0 0;
 }
 
 .header__title
 {
-	/* Here to remind that it exists. */
+	padding: 0;
+	margin: 0;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
 }
 
 .header__find

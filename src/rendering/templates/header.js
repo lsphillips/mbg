@@ -4,7 +4,7 @@ export function renderHeader ({
 {
 	return `<header class="header ${className}">
 		<h1 class="header__title">
-			My Board Games
+			Board Games
 		</h1>
 		<button type="button" class="header__find">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="header__find-icon">
