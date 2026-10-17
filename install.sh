@@ -14,7 +14,7 @@ while [[ $# -gt 0 ]]; do
 				exit 1
 	  		}
 			case "$2" in
-				bun-linux-arm64|bun-linux-x64|bun-linux-arm64-musl|bun-linux-x64-musl)
+				arm64|arm64-musl|x64|x64-musl)
 		  			platform="$2"
 		  			;;
 				*)
