@@ -1,3 +1,12 @@
+function isDebugMode (vars)
+{
+	return ['1', 'true', 'yes', 'on'].includes(
+		vars.DEBUG?.toLowerCase().trim()
+	);
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 export default class Terminal
 {
 	constructor (vars, stdout, stderr)
@@ -5,6 +14,7 @@ export default class Terminal
 		this.vars   = vars;
 		this.stdout = stdout;
 		this.stderr = stderr;
+		this.debug  = isDebugMode(vars);
 	}
 
 	env (key, fallback = null)
@@ -24,6 +34,9 @@ export default class Terminal
 
 	log (message)
 	{
-		this.stderr.write(message + '\n');
+		if (this.debug)
+		{
+			this.stderr.write(message + '\n');
+		}
 	}
 }
