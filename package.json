@@ -13,7 +13,7 @@
 
     "dependencies" :
     {
-        "htmlnano" : "3.6.1"
+        "htmlnano" : "3.7.0"
     },
 
 	"devDependencies" :
